@@ -7,6 +7,7 @@
     <th>Title</th>
     <th>Desciption</th>
     <th>Edit</th>
+    <th>Detail</th>
     <th>Delete</th>
   </tr>
   <tr *ngFor="let item of Book">
@@ -14,5 +15,8 @@
     <td>{{item.author}}</td>
     <td>{{item.title}}</td>
     <td>{{item.description}}</td>
+    <td><a [routerLink]="['/edit/' , item.id]">Edit</a> </td>
+    <td><a [routerLink]="['/detail/' , item.id]" >Detail</a></td>
+    <td><a [routerLink]="['/delete/' , item.id]" >Delete</a></td>
   </tr>
 </table>

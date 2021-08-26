@@ -18,20 +18,20 @@ export class BookService {
   }
 
   getById(id: number): Observable<Book> {
-    return this.http.get<Book>(this.API + `books` + id);
+    return this.http.get<Book>(this.API + `books/` + id);
   }
 
   createBook(book: Book): Observable<Book> {
     // @ts-ignore
-    return this.http.post<Book>(this.API + 'books');
+    return this.http.post<Book>(this.API + 'books', book);
   }
 
   edit(id: number, book: Book): Observable<Book> {
     // @ts-ignore
-    return this.http.put<Book>(this.API + 'books' + id);
+    return this.http.put<Book>(this.API + 'books/' + id, book);
   }
 
   delete(id: number): Observable<Book> {
-    return this.http.delete<Book>(this.API + 'books' + id);
+    return this.http.delete<Book>(this.API + 'books/' + id);
   }
 }

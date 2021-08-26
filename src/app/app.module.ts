@@ -8,13 +8,17 @@ import {HttpClientModule} from '@angular/common/http';
 import { CreateComponent } from './create/create.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
+import { DetailComponent } from './detail/detail.component';
+import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    DetailComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
